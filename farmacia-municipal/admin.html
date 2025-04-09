@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Farmácia Municipal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="img/brasão alvorada.jpg" alt="Brasão de Alvorada do Sul" class="brasao">
+            <h1>FUNDAÇÃO MUNICIPAL DE SAÚDE DE ALVORADA DO SUL - ESTADO DO PARANÁ</h1>
+        </div>
+        <img src="img/LOGO SAÚDE.PNG" alt="Logo Saúde" class="logo-saude">
+    </header>
+
+    <main>
+        <h2>Administração de Estoque</h2>
+        
+        <form id="medForm" class="med-form">
+            <div class="form-group">
+                <label for="medName">Nome do Medicamento:</label>
+                <input type="text" id="medName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="medQuantity">Quantidade:</label>
+                <input type="number" id="medQuantity" min="0" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="medStatus">Situação:</label>
+                <select id="medStatus" required>
+                    <option value="Disponível">Disponível</option>
+                    <option value="Em falta">Em falta</option>
+                </select>
+            </div>
+            
+            <div class="form-group" id="restockGroup" style="display: none;">
+                <label for="medRestock">Previsão de reposição:</label>
+                <input type="date" id="medRestock">
+            </div>
+            
+            <button type="submit">Adicionar Medicamento</button>
+        </form>
+        
+        <div class="med-list">
+            <h3>Medicamentos Cadastrados</h3>
+            <table id="medTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Situação</th>
+                        <th>Previsão Reposição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Medicamentos serão inseridos aqui via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Rua Vereador José Pereira Lima – nº 525, CEP-86150-000 - Fone (43) -3157-1082</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
